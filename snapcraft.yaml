@@ -1,4 +1,4 @@
-name: tmux # you probably want to 'snapcraft register <name>'
+name: tmux-non-dead # you probably want to 'snapcraft register <name>'
 version: '2.7'
 summary: Access and control terminals (or windows)from a single terminal.
 description: |
