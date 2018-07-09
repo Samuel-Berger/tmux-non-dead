@@ -1,0 +1,5 @@
+#Ignore various directories created by snapcraft.
+parts/
+prime/
+snap/
+stage/

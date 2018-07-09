@@ -1,0 +1,42 @@
+name: tmux # you probably want to 'snapcraft register <name>'
+version: '2.7'
+summary: Access and control terminals (or windows)from a single terminal.
+description: |
+        tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
+        to be accessed and controlled from a single terminal. tmux is intended to be a
+        simple, modern, BSD-licensed alternative to programs such as GNU screen.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+#Requires at least a:
+# working C compiler, make, autoconf, automake,
+# pkg-config as well as libevent and ncurses libraries and headers.
+
+parts:
+        tmux:
+                plugin: autotools
+                source: https://github.com/tmux/tmux/releases/download/2.7/tmux-2.7.tar.gz
+                        #configflags:
+                        #- --host=x86_64-unknown-linux-gnu
+                        #source-type: tar
+                        
+                        #source-tag: '2.7'
+                        #stage-packages:
+                        #   - libevent-2.0-5:armhf
+                        #        - libncurses5:armhf
+#                        source .
+#                        build-packages:
+#                                - gcc
+#                                - make
+#                                - autoconf
+#                                - automake
+#                                - pkg-config
+#                                - libevent      #apt install libevent-dev
+#                                - libncurses
+                     
+apps:
+        tmux:
+                command: tmux
+        #plugs:
+        #        - home
