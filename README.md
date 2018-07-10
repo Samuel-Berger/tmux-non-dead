@@ -14,7 +14,12 @@ The best way to test if you have a working setup is to follow the guide from tmu
 
 If it works correctly, you can make snap by running:
    
-   cd tmux
-   snapcraft 
+    cd tmux
+    snapcraft 
 
 And thats it.
+
+## Helpful links:
+
+Change your username: https://github.com/canonical-websites/snapcraft.io/issues/404#issuecomment-375687099
+How to release: https://docs.snapcraft.io/build-snaps/release

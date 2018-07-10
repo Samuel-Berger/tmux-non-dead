@@ -1,6 +1,6 @@
 name: tmux-non-dead # you probably want to 'snapcraft register <name>'
 version: '2.7'
-summary: Access and control terminals (or windows)from a single terminal.
+summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
         to be accessed and controlled from a single terminal. tmux is intended to be a
@@ -19,8 +19,6 @@ apps:
         tmux:
                 #command: /bin/tmux
                 command: tmux
-        #plugs:
-        #        - home
 
 #Requires at least a:
 # working C compiler, make, autoconf, automake,
@@ -30,33 +28,7 @@ parts:
         tmux:
                 plugin: autotools
                 source: https://github.com/tmux/tmux/releases/download/2.7/tmux-2.7.tar.gz
-                #after: glibc
 
-                #https://docs.snapcraft.io/build-snaps/syntax#stage-packages
-                
                 stage-packages:
                         - libc6
                         - libevent-dev
-                        #plugin: libc6
-                        #source: https://ftp.acc.umu.se/mirror/gnu.org/gnu/glibc/glibc-2.27.tar.gz
-                        #configflags:
-                        #- --host=x86_64-unknown-linux-gnu
-                        #source-type: tar
-                        
-                        #source-tag: '2.7'
-                        #stage-packages:
-                        #   - libevent-2.0-5:armhf
-                        #        - libncurses5:armhf
-#                        source .
-#                        build-packages:
-#                                - gcc
-#                                - make
-#                                - autoconf
-#                                - automake
-#                                - pkg-config
-#                                - libevent      #apt install libevent-dev
-#                                - libncurses
-                #plugin: glibc27
-                #source: https://ftp.acc.umu.se/mirror/gnu.org/gnu/glibc/glibc-2.27.tar.gz
-                #source-type: tar
-                 
