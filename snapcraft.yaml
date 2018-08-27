@@ -28,6 +28,9 @@ apps:
 parts:
         tmux:
                 plugin: autotools
+                #source: https://github.com/tmux/tmux/releases/download/2.7/tmux-2.7.tar.gz
+#                source-type: git
+#                source: https://github.com/tmux/tmux.git
                 source: https://github.com/tmux/tmux/releases/download/2.7/tmux-2.7.tar.gz
 
                 stage-packages:
