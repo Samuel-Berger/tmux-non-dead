@@ -1,25 +1,13 @@
-# snap
-Scripts to create snaps.
+# tmux via snap
 
-## tmux
+You can use this if you want to install tmux via snap.
 
-To create a snap of tmux make sure you have the following packages installed:
-A working C compiler, make, autoconf, automake, pkg-config as well as libevent and ncurses libraries and headers.
-The best way to test if you have a working setup is to follow the guide from tmux and make sure it runs correctly:
+## Create a snap
 
-    git clone https://github.com/tmux/tmux.git
-	cd tmux
-	sh autogen.sh
-	./configure && make
-
-If it works correctly, you can make snap by running:
+To create a snap of tmux git clone this repo and run:
    
-    cd tmux
-    snapcraft 
+   cd snap-tmux
+   snapcraft 
 
-And thats it.
-
-## Helpful links:
-
-Change your username: https://github.com/canonical-websites/snapcraft.io/issues/404#issuecomment-375687099
-How to release: https://docs.snapcraft.io/build-snaps/release
+To install the local .snap package that you build run `snap install tmux-non-dead_3.1b_multi.snap --devmode`.
+In order for it to work you might have to change grade and confinement in snapcraft.yaml. 
