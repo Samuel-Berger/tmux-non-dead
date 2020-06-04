@@ -30,10 +30,12 @@ parts:
 
                 build-packages:
                         - libevent-dev
-                        - libncursesw5-dev
+                        #- libncursesw5-dev
+                        - libncurses-dev
                 stage-packages:
                         - libevent-dev
-                        - libncursesw5-dev
+                        #- libncursesw5-dev
+                        - libncurses-dev
                 #command: tmux
                 organize: 
                         tmux: bin/
