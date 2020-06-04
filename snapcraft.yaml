@@ -22,18 +22,18 @@ apps:
 #                command: /bin/tmux
                 command: tmux
 
-#Requires at least a:
-# working C compiler, make, autoconf, automake,
-# pkg-config as well as libevent and ncurses libraries and headers.
-
 parts:
         tmux:
                 plugin: autotools
+                #source: https://github.com/tmux/tmux/releases/download/3.2/tmux-3.2.tar.gz
                 source: https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b.tar.gz
 
+                build-packages:
+                        - libevent-dev
+                        - libncursesw5-dev
                 stage-packages:
                         - libevent-dev
-                        - libncurses-dev
+                        - libncursesw5-dev
                 #command: tmux
                 organize: 
                         tmux: bin/
