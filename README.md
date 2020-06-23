@@ -4,18 +4,19 @@
 
 You can use this if you want to install tmux via snap.
 
-## Create a snap
+## Install this snap
+
+As of now tmux does not seem to work when installed via the snapstore.
+Use the instructions below to make a local copy to run.
 
 To create a snap of tmux git clone this repo and run:
    
 ```shell
    cd snap-tmux
    snapcraft
-   snap install tmux-non-dead_3.1b_multi.snap --devmode
+   sudo snap install tmux-non-dead_[version].snap --devmode
+   tmux-non-dead.tmux
 ```
-
-To install the local .snap package that you build run `snap install tmux-non-dead_3.1b_multi.snap --devmode`.
-In order for it to work you might have to change grade and confinement in snapcraft.yaml.
 
 ## Resources
 
@@ -24,3 +25,4 @@ In order for it to work you might have to change grade and confinement in snapcr
 Unfortunately snapcraft does not support CVS.  
 [tmux mailing list](tmux-users@googlegroups.com)  
 [tmux on GitHub](https://github.com/tmux/tmux/wiki)
+Things [pledge does](https://github.com/tmux/tmux/blob/master/client.c#L300), might be helpful when locking down slots.
