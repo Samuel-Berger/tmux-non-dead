@@ -1,14 +1,14 @@
-name: tmux-non-dead # you probably want to 'snapcraft register <name>'
-version: '3.2-rc'
+name: tmux-non-dead
+version: '3.1b'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
         to be accessed and controlled from a single terminal. tmux is intended to be a
         simple, modern, BSD-licensed alternative to programs such as GNU screen.
 
-#grade: stable # must be 'stable' to release into candidate/stable channels
 grade: stable 
-confinement: devmode # use strict or devmode
+confinement: classic # use classic or devmode
+license: ISC
 base: core18
 
 architectures:
@@ -17,13 +17,13 @@ architectures:
         
 apps:
         tmux:
-#                command: /bin/tmux
                 command: tmux
 
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.2/tmux-3.2-rc.tar.gz
+                #source: https://github.com/tmux/tmux/releases/download/3.2/tmux-3.2-rc.tar.gz
+                source: https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b.tar.gz
 
                 build-packages:
                         - libevent-dev

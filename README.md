@@ -10,7 +10,7 @@ As of now tmux does not seem to work when installed via the snapstore.
 Use the instructions below to make a local copy to run.
 
 To create a snap of tmux git clone this repo and run:
-   
+
 ```shell
    cd snap-tmux
    snapcraft
