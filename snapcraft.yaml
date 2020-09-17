@@ -9,15 +9,16 @@ description: |
 grade: stable # Use stable or devel
 confinement: classic
 license: ISC
-base: core18
+base: core20
 
 architectures:
-  - build-on: [amd64, armhf]
-    run-on: [armhf, arm64, amd64]
+  #- build-on: [amd64, armhf]   # Need fix for multipass.
+  - build-on: [amd64]
+    run-on: [armhf, arm64, amd64, i386]
         
 apps:
         tmux:
-                command: tmux
+                command: usr/local/bin/tmux
 
 parts:
         tmux:
@@ -25,13 +26,12 @@ parts:
                 source: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc2.tar.gz
 
                 build-packages:
+                        - make # Needed to build against core20.
                         - libevent-dev
-                        #- libncursesw5-dev
                         - libncurses-dev
                         - libtinfo5
                 stage-packages:
                         - libevent-dev
-                        - libncursesw5-dev
-                        #- libncurses-dev
-                organize: 
-                        tmux: bin/
+                        #- libncursesw5-dev
+#                organize: 
+#                        tmux: bin/
