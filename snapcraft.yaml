@@ -1,5 +1,5 @@
 name: tmux
-version: '3.2-rc2'
+version: '3.1c'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
@@ -23,7 +23,7 @@ apps:
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc2.tar.gz
+                source: https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.1c.tar.gz
 
                 build-packages:
                         - make # Needed to build against core20.
