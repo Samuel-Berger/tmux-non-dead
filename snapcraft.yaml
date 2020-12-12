@@ -15,10 +15,11 @@ architectures:
   #- build-on: [amd64, armhf]   # Need fix for multipass.
   - build-on: [amd64]
     run-on: [armhf, arm64, amd64, i386]
-        
-apps:
-        tmux:
-                command: usr/local/bin/tmux
+
+# Seems to need core20        
+#apps:
+#        tmux:
+#                command: usr/local/bin/tmux
 
 parts:
         tmux:
@@ -32,6 +33,5 @@ parts:
                         - libtinfo5
                 stage-packages:
                         - libevent-dev
-                        #- libncursesw5-dev
 #                organize: 
 #                        tmux: bin/
