@@ -9,7 +9,7 @@ description: |
 grade: stable # Use stable or devel
 confinement: classic
 license: ISC
-base: core20
+base: core18
 
 architectures:
   #- build-on: [amd64, armhf]   # Need fix for multipass.
