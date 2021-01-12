@@ -1,5 +1,6 @@
 name: tmux
-version: '3.2-rc3'
+#version: '3.2-rc3'
+version: '3.1c'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
@@ -9,23 +10,23 @@ description: |
 grade: stable # Use stable or devel
 confinement: classic
 license: ISC
-base: core18
+base: core20
 
 architectures:
   #- build-on: [amd64, armhf]   # Need fix for multipass.
   - build-on: [amd64]
-    run-on: [armhf, arm64, amd64, i386]
+    run-on: [armhf, arm64, amd64]
 
 # Seems to need core20        
-#apps:
-#        tmux:
-#                command: usr/local/bin/tmux
+apps:
+        tmux:
+                command: usr/local/bin/tmux
 
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc3.tar.gz
-
+                #source: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc3.tar.gz
+                source: https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.1c.tar.gz
                 build-packages:
                         - make # Needed to build against core20.
                         - libevent-dev

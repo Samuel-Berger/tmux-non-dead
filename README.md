@@ -41,3 +41,4 @@ Currently the build compiles but won't create a snap due to `Failed to generate 
 * [tmux on GitHub](https://github.com/tmux/tmux/wiki)
 * Waiting for [external development](https://forum.snapcraft.io/t/support-for-man-pages/2299) before proceeding on manpages.
 * Waiting for [external development](https://github.com/canonical/multipass/issues/1376) before proceeding to build on Raspbery Pi.
+https://dashboard.snapcraft.io/snaps/tmux-non-dead/upload/
