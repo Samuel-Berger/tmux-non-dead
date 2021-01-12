@@ -1,5 +1,5 @@
 name: tmux
-version: '3.2-rc3'
+version: 'master'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
@@ -22,7 +22,9 @@ apps:
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.2-rc/tmux-3.2-rc3.tar.gz
+                source: https://github.com/tmux/tmux
+                source-type: git 
+                source-branch: master
                 build-packages:
                         - make
                         - libevent-dev
