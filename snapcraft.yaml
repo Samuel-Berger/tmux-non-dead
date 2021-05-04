@@ -1,12 +1,12 @@
 name: tmux
-version: '3.1c'
+version: '3.2'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
         to be accessed and controlled from a single terminal. tmux is intended to be a
         simple, modern, BSD-licensed alternative to programs such as GNU screen.
 #icon: https://icon-icons.com/downloadimage.php?id=131831&root=2148/SVG/&file=tmux_icon_131831.svg
-grade: stable # Use stable or devel
+grade: devel # Use stable or devel
 confinement: classic
 license: ISC
 base: core20
@@ -22,7 +22,7 @@ apps:
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.1c.tar.gz
+                source: https://github.com/tmux/tmux/releases/download/3.2/tmux-3.2.tar.gz
                 build-packages:
                         - make
                         - libevent-dev
