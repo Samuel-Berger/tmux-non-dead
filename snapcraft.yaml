@@ -6,7 +6,7 @@ description: |
         to be accessed and controlled from a single terminal. tmux is intended to be a
         simple, modern, BSD-licensed alternative to programs such as GNU screen.
 #icon: https://icon-icons.com/downloadimage.php?id=131831&root=2148/SVG/&file=tmux_icon_131831.svg
-grade: devel # Use stable or devel
+grade: stable # Use stable or devel
 confinement: classic
 license: ISC
 base: core20
