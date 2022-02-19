@@ -4,34 +4,28 @@
 
 You can use this if you want to install tmux via snap.
 
-## Install this snap
+## Install on your Local Machine
 
-As of now tmux does not seem to work when installed via the snapstore.
-Use the instructions below to make a local copy to run.
+If you want to use `tmux` instead of `tmux-non-dead` you have to build and install from your local machine. First change the first line in `snapcraft.yaml` from `tmux-non-dead` to `tmux`.
+Then build it locally.
 
 To create a snap and install the locally built snap: git clone this repo and run:
 
-```shell
+```sh
    cd snap-tmux
    snapcraft
    sudo snap install tmux-non-dead_[version].snap --devmode
    tmux-non-dead.tmux
 ```
 
-## This branch builds against Ubuntu 20.04 (core20)
+## How to Build and Release
 
-If the above does not work you probably need to install the edge versions of core and multipass.
-
-```shell
-sudo snap switch --edge multipass
-sudo snap refresh multipass
-sudo snap switch --beta core20
-sudo snap refresh core20
+```sh
+snapcraft
+snapcraft login   # You won't be able to do this step.
+snapcraft upload tmux-non-dead_3.2a_multi.snap --release candidate, beta
+sudo snap install tmux-non-dead --candidate --classic
 ```
-
-Try to run `snapcraft` and see if it works.
-
-Currently the build compiles but won't create a snap due to `Failed to generate snap metadata: The specified command 'tmux' defined in the app 'tmux' is not executable.`
 
 ## Resources
 
