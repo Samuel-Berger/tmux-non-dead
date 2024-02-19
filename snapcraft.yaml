@@ -1,5 +1,5 @@
 name: tmux-non-dead
-version: '3.2a'
+version: '3.4'
 summary: Access and control terminals (or windows) from a single terminal.
 description: |
         tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
@@ -22,14 +22,15 @@ apps:
 parts:
         tmux:
                 plugin: autotools
-                source: https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
-                
+                source: https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
+
                 build-packages:
                         - make
                         - libevent-dev
                         - libncurses-dev
                         - libtinfo5
+                        - bison
                 stage-packages:
                         - libevent-dev
-                organize: 
+                organize:
                         tmux: bin/
